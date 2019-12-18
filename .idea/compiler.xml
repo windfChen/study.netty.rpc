@@ -7,10 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
+        <module name="custom" />
+        <module name="netty-rpc-api" />
+        <module name="netty-rpc-custom" />
+        <module name="netty-rpc-protocol" />
+        <module name="netty-rpc-provider" />
+        <module name="netty-rpc-registry" />
         <module name="protocol" />
         <module name="provider" />
         <module name="registry" />
-        <module name="custom" />
       </profile>
     </annotationProcessing>
   </component>

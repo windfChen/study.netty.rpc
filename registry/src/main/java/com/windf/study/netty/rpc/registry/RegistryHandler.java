@@ -91,4 +91,8 @@ public class RegistryHandler extends ChannelInboundHandlerAdapter {
             }
         }
     }
+
+    public List<String> getClassNames() {
+        return classNames;
+    }
 }

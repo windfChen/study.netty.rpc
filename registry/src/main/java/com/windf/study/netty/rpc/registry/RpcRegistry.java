@@ -1,24 +1,38 @@
 package com.windf.study.netty.rpc.registry;
 
+import com.windf.study.netty.rpc.registry.register.RegisterCenter;
+import com.windf.study.netty.rpc.registry.register.RegisterCenterByZookeeper;
+import com.windf.study.netty.rpc.registry.register.ServiceAddress;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
-import io.netty.handler.codec.serialization.ClassResolver;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class RpcRegistry {
 
     private int port;
+    private RegistryHandler registryHandler;
 
     public RpcRegistry(int port) {
         this.port = port;
+        this.registryHandler = new RegistryHandler();
+
+        // 去注册中心注册
+        ServiceAddress serviceAddress = new ServiceAddress(port);
+        RegisterCenter registerCenter = new RegisterCenterByZookeeper();
+        // 依次注册各个服务
+        for (String className : registryHandler.getClassNames()) {
+            registerCenter.register(className, serviceAddress);
+        }
     }
 
     public void start() {
@@ -37,7 +51,7 @@ public class RpcRegistry {
                         pipeline.addLast(new LengthFieldPrepender(4));
                         pipeline.addLast("encoder", new ObjectEncoder());
                         pipeline.addLast("decoder", new ObjectDecoder(Integer.MAX_VALUE, ClassResolvers.cacheDisabled(null)));
-                        pipeline.addLast(new RegistryHandler());
+                        pipeline.addLast(registryHandler);
                     }
                 })
                 .option(ChannelOption.SO_BACKLOG, 128)
@@ -53,7 +67,7 @@ public class RpcRegistry {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         new RpcRegistry(6789).start();
     }
 }
