@@ -30,7 +30,7 @@ public class RpcRegistry {
         ServiceAddress serviceAddress = new ServiceAddress(port);
         RegisterCenter registerCenter = new RegisterCenterByZookeeper();
         // 依次注册各个服务
-        for (String className : registryHandler.getClassNames()) {
+        for (String className : registryHandler.getServiceNames()) {
             registerCenter.register(className, serviceAddress);
         }
     }
@@ -51,7 +51,7 @@ public class RpcRegistry {
                         pipeline.addLast(new LengthFieldPrepender(4));
                         pipeline.addLast("encoder", new ObjectEncoder());
                         pipeline.addLast("decoder", new ObjectDecoder(Integer.MAX_VALUE, ClassResolvers.cacheDisabled(null)));
-                        pipeline.addLast(registryHandler);
+                        pipeline.addLast(new RegistryHandler());
                     }
                 })
                 .option(ChannelOption.SO_BACKLOG, 128)
@@ -68,6 +68,6 @@ public class RpcRegistry {
     }
 
     public static void main(String[] args) {
-        new RpcRegistry(6789).start();
+        new RpcRegistry(6786).start();
     }
 }

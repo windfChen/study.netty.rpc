@@ -12,17 +12,54 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class RegistryHandler extends ChannelInboundHandlerAdapter {
     private static ConcurrentHashMap<String, Object> registryMap = new ConcurrentHashMap<String, Object>();
+    private static List<String> classNames = new ArrayList<String>();
 
-    private List<String> classNames = new ArrayList<String>();
+    static {
+        scannerClass("com.windf.study.netty.rpc.provider");
+        doRegister();
+    }
+
+    /**
+     * 遍历class
+     * @param basePackage
+     */
+    private static void scannerClass(String basePackage) {
+        URL url = RegistryHandler.class.getClassLoader().getResource(basePackage.replaceAll("\\.", "/"));
+        File dir = new File(url.getFile());
+        for (File file : dir.listFiles()) {
+            if(file.isDirectory()){
+                scannerClass(basePackage + "." + file.getName());
+            }else{
+                classNames.add(basePackage + "." + file.getName().replace(".class", "").trim());
+            }
+        }
+    }
+
+    /**
+     * 注册bean
+     */
+    private static void doRegister() {
+        for (String className : classNames) {
+            try {
+                Class clazz = Class.forName(className);
+                Class interfaceClass = clazz.getInterfaces()[0];
+                registryMap.put(interfaceClass.getName(), clazz.newInstance());
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     public RegistryHandler() {
-        this.scannerClass("com.windf.study.netty.rpc.provider");
-
-        this.doRegister();
     }
 
     @Override
@@ -64,35 +101,7 @@ public class RegistryHandler extends ChannelInboundHandlerAdapter {
         return result;
     }
 
-    private void scannerClass(String basePackage) {
-        URL url = this.getClass().getClassLoader().getResource(basePackage.replaceAll("\\.", "/"));
-        File dir = new File(url.getFile());
-        for (File file : dir.listFiles()) {
-            if(file.isDirectory()){
-                scannerClass(basePackage + "." + file.getName());
-            }else{
-                classNames.add(basePackage + "." + file.getName().replace(".class", "").trim());
-            }
-        }
-    }
-
-    private void doRegister() {
-        for (String className : classNames) {
-            try {
-                Class clazz = Class.forName(className);
-                Class interfaceClass = clazz.getInterfaces()[0];
-                registryMap.put(interfaceClass.getName(), clazz.newInstance());
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public List<String> getClassNames() {
-        return classNames;
+    public Set<String> getServiceNames() {
+        return registryMap.keySet();
     }
 }
