@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c983d8-29d0-4df2-93ef-c223bd62e0ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DisCovery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/ServiceAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/ServiceAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="01c983d8-29d0-4df2-93ef-c223bd62e0ad" name="Default Changelist" comment="服务发现和注册写到一半了">
+      <change afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/LoadBalanceStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/RandomLoadBalance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty-rpc.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/com/windf/study/netty/rpc/api/HelloService.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/com/windf/study/netty/rpc/api/HelloService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DisCovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/Discovery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/BeanFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/BeanFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/BeanFactory$RpcProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/BeanFactory$RpcProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/BeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/CustomHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/CustomHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/RpcInvoker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/RpcInvoker$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/RpcInvoker.class" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/classes/com/windf/study/netty/rpc/custom/RpcInvoker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protocol/target/classes/com/windf/study/netty/rpc/protocol/InvokerProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/protocol/target/classes/com/windf/study/netty/rpc/protocol/InvokerProtocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/windf/study/netty/rpc/provider/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/windf/study/netty/rpc/provider/HelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/windf/study/netty/rpc/provider/HelloServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/windf/study/netty/rpc/provider/HelloServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/target/classes/com/windf/study/netty/rpc/registry/RegistryHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/registry/target/classes/com/windf/study/netty/rpc/registry/RegistryHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registry/target/classes/com/windf/study/netty/rpc/registry/RpcRegistry$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/registry/target/classes/com/windf/study/netty/rpc/registry/RpcRegistry$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registry/target/classes/com/windf/study/netty/rpc/registry/RpcRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/registry/target/classes/com/windf/study/netty/rpc/registry/RpcRegistry.class" afterDir="false" />
     </list>
@@ -33,15 +41,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RpcRegistry.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="RpcRegistry.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+            <state relative-caret-position="224">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
               <folding>
-                <element signature="e#3189#3190#0" expanded="true" />
-                <element signature="e#3234#3235#0" expanded="true" />
+                <element signature="e#1729#2451#0" expanded="true" />
+                <element signature="e#2450#2451#0" expanded="true" />
+                <element signature="e#3011#3012#0" expanded="true" />
+                <element signature="e#3056#3057#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,82 +60,62 @@
       <file leaf-file-name="ServiceAddress.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/ServiceAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="175">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
-              <folding>
-                <element signature="e#2896#2897#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/custom/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisCovery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DisCovery.java">
+      <file leaf-file-name="HelloService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/windf/study/netty/rpc/api/HelloService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiscoveryByZookeeper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java">
+      <file leaf-file-name="BeanFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/BeanFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="203">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelloServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/windf/study/netty/rpc/provider/HelloServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RpcInvoker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-455">
+              <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
               <folding>
-                <element signature="e#165#166#0" expanded="true" />
-                <element signature="e#192#193#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceAddress.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/ServiceAddress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-              <folding>
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterCenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -133,10 +123,24 @@
       <file leaf-file-name="RegistryHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+            <state relative-caret-position="126">
+              <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
               <folding>
-                <element signature="e#3398#3399#0" expanded="true" />
+                <element signature="e#2955#2956#0" expanded="true" />
+                <element signature="e#2998#2999#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/CustomHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+              <folding>
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,8 +149,8 @@
       <file leaf-file-name="RegisterCenterByZookeeper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-81">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="46" />
+            <state relative-caret-position="190">
+              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,6 +168,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>EPHEMERAL</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -175,16 +184,24 @@
         <option value="$PROJECT_DIR$/custom/pom.xml" />
         <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/DisCovery.java" />
         <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/ServiceAddress.java" />
-        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DisCovery.java" />
         <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegisterCenter.java" />
         <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/registerCen/RegisterCenter.java" />
         <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/registerCen/RegisterCenterByZookeeper.java" />
         <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenter.java" />
-        <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java" />
-        <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java" />
         <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/ServiceAddress.java" />
-        <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/LoadBalanceStrategy.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/RandomLoadBalanceStrategy.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/RandomLoadBalance.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DisCovery.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/Discovery.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryFactory.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java" />
+        <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/Client.java" />
         <option value="$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java" />
+        <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java" />
+        <option value="$PROJECT_DIR$/provider/src/main/java/com/windf/study/netty/rpc/provider/HelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java" />
+        <option value="$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java" />
       </list>
     </option>
   </component>
@@ -215,6 +232,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,8 +335,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,6 +349,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -340,6 +360,7 @@
       <recent name="com.windf.study.netty.api" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.windf.study.netty.rpc.custom.discover" />
       <recent name="com.windf.study.netty.rpc.custom" />
       <recent name="com.windf.study.netty.rpc.registry" />
     </key>
@@ -471,39 +492,47 @@
       <updated>1573880145793</updated>
       <workItem from="1573880148657" duration="1199000" />
       <workItem from="1573881355922" duration="7344000" />
-      <workItem from="1576676636471" duration="4607000" />
+      <workItem from="1576676636471" duration="4791000" />
+      <workItem from="1576734945945" duration="13104000" />
     </task>
+    <task id="LOCAL-00001" summary="服务发现和注册写到一半了">
+      <created>1576681720206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576681720206</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4607000" />
+    <option name="totallyTimeSpent" value="17895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.3299712" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" weight="0.3299712" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" weight="0.3299712" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3299712" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50072044" side_tool="true" weight="0.39913544" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3299712" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299712" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25432277" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39913544" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49927953" visible="true" weight="0.39913544" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,77 +541,62 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="服务发现和注册写到一半了" />
+    <option name="LAST_COMMIT_MESSAGE" value="服务发现和注册写到一半了" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/CustomHandler.java</url>
-          <line>9</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/CustomHandler.java">
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="360">
+          <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding>
-            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#1729#2451#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3056#3057#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java">
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/ServiceAddress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="792">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/BeanFactory.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registry/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="1560">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#2896#2897#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/custom/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="816">
           <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/Discovery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -604,29 +618,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="192">
           <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="1968">
           <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
           <folding>
-            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#2998#2999#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java">
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        <state relative-caret-position="624">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="46" />
           <folding>
-            <element signature="e#3189#3190#0" expanded="true" />
-            <element signature="e#3234#3235#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registry/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -639,7 +677,7 @@
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="1560">
           <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="e#2896#2897#0" expanded="true" />
@@ -647,44 +685,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/ServiceAddress.java">
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="176">
+          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/ServiceAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/curator/curator-framework/4.0.0/curator-framework-4.0.0.jar!/org/apache/curator/framework/api/Pathable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/LoadBalanceStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/RandomLoadBalance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/Discovery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="2075" column="26" selection-start-line="2075" selection-start-column="26" selection-end-line="2075" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+          <folding>
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-470">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/CustomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/RegisterCenterByZookeeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="190">
+          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DisCovery.java">
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/BeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        <state relative-caret-position="203">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/discover/DiscoveryByZookeeper.java">
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/RpcInvoker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="-455">
+          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
           <folding>
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/windf/study/netty/rpc/api/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/windf/study/netty/rpc/provider/HelloServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/windf/study/netty/rpc/custom/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/register/ServiceAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RegistryHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#2998#2999#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/windf/study/netty/rpc/registry/RpcRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#1729#2451#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3056#3057#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>netty-rpc-registry</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.guava:guava:20.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

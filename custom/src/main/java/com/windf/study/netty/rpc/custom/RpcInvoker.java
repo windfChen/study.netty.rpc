@@ -1,5 +1,9 @@
 package com.windf.study.netty.rpc.custom;
 
+import com.windf.study.netty.rpc.custom.discover.Discovery;
+import com.windf.study.netty.rpc.custom.discover.DiscoveryByZookeeper;
+import com.windf.study.netty.rpc.custom.discover.DiscoveryFactory;
+import com.windf.study.netty.rpc.custom.discover.ServiceAddress;
 import com.windf.study.netty.rpc.protocol.InvokerProtocol;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
@@ -8,10 +12,11 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
-import io.netty.handler.codec.serialization.ClassResolver;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
+
+import javax.xml.ws.Service;
 
 public class RpcInvoker {
 
@@ -41,7 +46,9 @@ public class RpcInvoker {
                     }
                 });
         try {
-            ChannelFuture channelFuture = bootstrap.connect("localhost", 6789).sync();
+            Discovery discovery = DiscoveryFactory.getBean();
+            ServiceAddress serviceAddress = discovery.discovery(invokerProtocol.getClassName());
+            ChannelFuture channelFuture = bootstrap.connect(serviceAddress.getHost(), serviceAddress.getPort()).sync();
             channelFuture.channel().writeAndFlush(this.invokerProtocol).sync();
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
